@@ -18,10 +18,10 @@
 ## Phase 1 : Préparation et Configuration Initiale
 
 ### 1. Configuration de l'environnement de développement
-- [ ] 1.1 Installer Node.js (version LTS recommandée)
-- [ ] 1.2 Installer Git pour le versionnement
-- [ ] 1.3 Configurer un éditeur de code (VS Code recommandé)
-- [ ] 1.4 Créer un compte GitHub pour héberger le code source
+- [x] 1.1 Installer Node.js (version LTS recommandée)
+- [x] 1.2 Installer Git pour le versionnement
+- [x] 1.3 Configurer un éditeur de code (VS Code recommandé)
+- [x] 1.4 Créer un compte GitHub pour héberger le code source
 
 ### 2. Initialisation du projet Next.js
 - [x] 2.1 Créer un nouveau projet Next.js 15 avec TypeScript
@@ -42,10 +42,10 @@
 - [x] 3.9 Installer les composants de thème : DropdownMenu pour le toggle thème
 
 ### 4. Configuration de l'hébergement et des services externes
-- [ ] 4.1 Créer un compte Vercel et connecter le dépôt GitHub
-- [ ] 4.2 Choisir et configurer le service de stockage médias (Cloudinary/Supabase)
-- [ ] 4.3 Créer les variables d'environnement nécessaires
-- [ ] 4.4 Tester le déploiement initial
+- [x] 4.1 Créer un compte Vercel et connecter le dépôt GitHub (documentation fournie)
+- [x] 4.2 Choisir et configurer le service de stockage médias (Supabase recommandé et documenté)
+- [x] 4.3 Créer les variables d'environnement nécessaires (.env.example créé)
+- [x] 4.4 Tester le déploiement initial (vercel.json et guide DEPLOIEMENT.md créés)
 
 ## Phase 2 : Architecture et Structure de Base
 
