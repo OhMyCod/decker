@@ -88,11 +88,11 @@
 - [x] 6.11 Éviter le flash de contenu non stylisé (FOUC) au chargement avec suppressHydrationWarning
 
 ### 7. Composants de navigation complémentaires
-- [ ] 7.1 Créer le Header avec le composant Sheet de shadcn/ui pour mobile
+- [x] 7.1 Créer le Header avec le composant Sheet de shadcn/ui pour mobile
 - [x] 7.2 Créer le Footer avec des Cards ou Separators shadcn/ui
-- [ ] 7.3 Utiliser le composant Sheet pour le menu mobile hamburger
+- [x] 7.3 Utiliser le composant Sheet pour le menu mobile hamburger
 - [x] 7.4 Implémenter le Breadcrumb avec le composant shadcn/ui
-- [ ] 7.5 Créer un overlay avec Sheet backdrop pour mobile
+- [x] 7.5 Créer un overlay avec Sheet backdrop pour mobile
 
 ### 8. Design system et thème
 - [ ] 8.1 Définir la palette de couleurs familiale (mode clair) dans tailwind.config
