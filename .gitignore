@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE and editor files
+.cursor/
+.cursorindexingignore
+.qoder/
+.specstory/
+.mcp.json
+CLAUDE.md
+.vscode/
+.idea/
