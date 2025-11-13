@@ -21,7 +21,7 @@ Si ce n'est pas déjà fait :
 
 1. Allez sur [github.com](https://github.com)
 2. Cliquez sur "New repository"
-3. Nom du dépôt : `decker-family-website`
+3. Nom du dépôt : `decker`
 4. Description : `Site web familial de la famille DECKER`
 5. Choisissez "Private" pour un dépôt privé
 6. Ne cochez PAS "Add a README" (vous en avez déjà un)
