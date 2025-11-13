@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AppSidebar } from "@/components/app-sidebar";
+import { SiteFooter } from "@/components/site-footer";
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
 import "./globals.css";
@@ -47,9 +48,10 @@ export default function RootLayout({
                   <h1 className="text-lg font-semibold">Famille DECKER</h1>
                 </div>
               </header>
-              <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+              <div className="flex flex-1 flex-col gap-4 p-4 pt-0 min-h-0">
                 {children}
               </div>
+              <SiteFooter />
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>

@@ -89,9 +89,9 @@
 
 ### 7. Composants de navigation complémentaires
 - [ ] 7.1 Créer le Header avec le composant Sheet de shadcn/ui pour mobile
-- [ ] 7.2 Créer le Footer avec des Cards ou Separators shadcn/ui
+- [x] 7.2 Créer le Footer avec des Cards ou Separators shadcn/ui
 - [ ] 7.3 Utiliser le composant Sheet pour le menu mobile hamburger
-- [ ] 7.4 Implémenter le Breadcrumb avec le composant shadcn/ui
+- [x] 7.4 Implémenter le Breadcrumb avec le composant shadcn/ui
 - [ ] 7.5 Créer un overlay avec Sheet backdrop pour mobile
 
 ### 8. Design system et thème
@@ -133,14 +133,14 @@
 ## Phase 4 : Fonctionnalités - Histoire Familiale
 
 ### 12. Page Histoire familiale - Structure chronologique
-- [ ] 12.1 Créer le layout principal avec Sidebar et navigation par période
-- [ ] 12.2 Créer la section "Les Origines" (date la plus ancienne connue)
-- [ ] 12.3 Créer la section "XIXᵉ siècle" avec événements et contexte
-- [ ] 12.4 Créer la section "XXᵉ siècle" (guerres, résistance, Colonel Rémy)
-- [ ] 12.5 Créer la section "Après-guerre → années 2000"
-- [ ] 12.6 Créer la section "Génération actuelle"
+- [x] 12.1 Créer le layout principal avec Sidebar et navigation par période
+- [x] 12.2 Créer la section "Les Origines" (date la plus ancienne connue)
+- [x] 12.3 Créer la section "XIXᵉ siècle" avec événements et contexte
+- [x] 12.4 Créer la section "XXᵉ siècle" (guerres, résistance, Colonel Rémy)
+- [x] 12.5 Créer la section "Après-guerre → années 2000"
+- [x] 12.6 Créer la section "Génération actuelle"
 - [ ] 12.7 Implémenter une timeline animée horizontale avec scroll
-- [ ] 12.8 Créer des cartes d'événements avec Card et Badge shadcn/ui
+- [x] 12.8 Créer des cartes d'événements avec Card et Badge shadcn/ui
 - [ ] 12.9 Ajouter des filtres par période avec Select shadcn/ui
 - [ ] 12.10 Intégrer des photos d'époque avec AspectRatio et Dialog pour zoom
 
@@ -533,11 +533,45 @@
   - Variables CSS configurées pour les deux modes
   - Persistance du choix utilisateur
 
+- ✅ **Tâche 7.2** : Footer avec Cards et Separators - **100% complétée**
+  - Composant `SiteFooter` créé avec 3 colonnes (À propos, Navigation, Sources & Contact)
+  - Utilisation de Card, Separator et icônes lucide-react
+  - Design responsive et intégration dans le layout principal
+
+- ✅ **Tâche 7.4** : Breadcrumb avec shadcn/ui - **100% complétée**
+  - Composant `HistoireBreadcrumb` créé avec navigation dynamique
+  - Breadcrumb adaptatif selon la page (2 ou 3 niveaux)
+  - Intégration dans le layout `/histoire`
+
 **Fonctionnalités supplémentaires implémentées :**
 - Navigation organisée en groupes logiques avec labels
 - Sous-menus expandables avec animation (Collapsible)
 - Profil utilisateur complet avec dropdown (Paramètres, Thème, Déconnexion)
 - Style épuré correspondant au design moderne (fond blanc, texte sombre, bordures subtiles)
+
+### État d'avancement - Phase 4
+
+**Tâches complétées :**
+- ✅ **Tâche 12** : Page Histoire familiale - Structure chronologique - **80% complétée**
+  - ✅ Layout principal créé (`app/histoire/layout.tsx`) avec Breadcrumb dynamique et SectionHeader
+  - ✅ Composant `SectionHeader` réutilisable créé avec props title, description, icon
+  - ✅ Page index (`app/histoire/page.tsx`) avec grille responsive de Cards pour les 5 périodes
+  - ✅ Section "Les Origines" (`app/histoire/origines/page.tsx`) créée
+  - ✅ Section "XIXᵉ siècle" (`app/histoire/xixe/page.tsx`) créée
+  - ✅ Section "XXᵉ siècle" (`app/histoire/xxe/page.tsx`) créée avec mention Colonel Rémy
+  - ✅ Section "Après-guerre → 2000" (`app/histoire/apres-guerre/page.tsx`) créée
+  - ✅ Section "Génération actuelle" (`app/histoire/actuelle/page.tsx`) créée
+  - ✅ Cartes d'événements avec Card et Badge shadcn/ui implémentées
+  - ⏳ Timeline animée horizontale (à venir)
+  - ⏳ Filtres par période (à venir)
+  - ⏳ Intégration photos d'époque (à venir)
+
+**Architecture implémentée :**
+- Layout serveur avec composants client séparés (`HistoireBreadcrumb`, `HistoireHeader`)
+- Breadcrumb dynamique basé sur `usePathname()` pour navigation contextuelle
+- Grille responsive Cards (md:grid-cols-2 lg:grid-cols-3) pour la page index
+- Structure modulaire avec composants réutilisables (SectionHeader)
+- URLs alignées avec la sidebar (`/histoire/xixe`, `/histoire/xxe`, `/histoire/actuelle`)
 
 ### Spécifications détaillées de la Sidebar
 
