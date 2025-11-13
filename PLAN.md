@@ -50,16 +50,16 @@
 ## Phase 2 : Architecture et Structure de Base
 
 ### 4. Définition de la structure du site
-- [ ] 4.1 Créer la page d'accueil (/) avec présentation et accès aux sections principales
-- [ ] 4.2 Créer la page Histoire familiale (/histoire) avec sous-sections chronologiques
-- [ ] 4.3 Créer la page Archives & Documents (/archives)
-- [ ] 4.4 Créer la page Créations artistiques (/creations) avec sous-sections par type
-- [ ] 4.5 Créer la page Portraits des membres (/portraits)
-- [ ] 4.6 Créer la page Arbre généalogique interactif (/genealogie)
-- [ ] 4.7 Créer la page Témoignages (/témoignages)
-- [ ] 4.8 Créer la page Téléchargements/Archive numérique (/telechargements)
-- [ ] 4.9 Créer la page Méthode & Sources (/sources)
-- [ ] 4.10 Créer l'espace d'administration protégé (/admin)
+- [x] 4.1 Créer la page d'accueil (/) avec présentation et accès aux sections principales
+- [x] 4.2 Créer la page Histoire familiale (/histoire) avec sous-sections chronologiques
+- [x] 4.3 Créer la page Archives & Documents (/archives)
+- [x] 4.4 Créer la page Créations artistiques (/creations) avec sous-sections par type
+- [x] 4.5 Créer la page Portraits des membres (/portraits)
+- [x] 4.6 Créer la page Arbre généalogique interactif (/genealogie)
+- [x] 4.7 Créer la page Témoignages (/témoignages)
+- [x] 4.8 Créer la page Téléchargements/Archive numérique (/telechargements)
+- [x] 4.9 Créer la page Méthode & Sources (/sources)
+- [x] 4.10 Créer l'espace d'administration protégé (/admin)
 
 ### 5. Barre de menu latérale dépliable (Sidebar)
 - [ ] 5.1 Utiliser le composant Sidebar de shadcn/ui comme base
