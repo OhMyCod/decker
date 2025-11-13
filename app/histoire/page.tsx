@@ -47,7 +47,7 @@ export default function HistoirePage() {
             <h1 className="text-4xl md:text-5xl font-bold">Histoire Familiale</h1>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Découvrez l'histoire de la famille DECKER à travers les siècles, des origines jusqu'à aujourd'hui
+            Découvrez l&apos;histoire de la famille DECKER à travers les siècles, des origines jusqu&apos;à aujourd&apos;hui
           </p>
         </div>
 
@@ -89,9 +89,9 @@ export default function HistoirePage() {
         {/* Call to action */}
         <Card className="mt-12 bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
           <CardHeader>
-            <CardTitle>Contribuez à l'histoire familiale</CardTitle>
+            <CardTitle>Contribuez à l&apos;histoire familiale</CardTitle>
             <CardDescription>
-              Vous avez des souvenirs, photos ou documents à partager ? Contactez l'administrateur pour enrichir cette section.
+              Vous avez des souvenirs, photos ou documents à partager ? Contactez l&apos;administrateur pour enrichir cette section.
             </CardDescription>
           </CardHeader>
         </Card>
