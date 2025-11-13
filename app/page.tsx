@@ -72,7 +72,7 @@ export default function HomePage() {
             Famille DECKER
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Un voyage à travers l'histoire, les souvenirs et les créations d'une famille
+            Un voyage à travers l&apos;histoire, les souvenirs et les créations d&apos;une famille
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg">
@@ -123,7 +123,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">À propos de ce site</h2>
           <p className="text-lg text-muted-foreground mb-4">
-            Ce site familial a été créé pour préserver et partager l'histoire de la famille DECKER.
+            Ce site familial a été créé pour préserver et partager l&apos;histoire de la famille DECKER.
             Vous y trouverez des documents historiques, des archives familiales, des créations artistiques
             et bien plus encore.
           </p>

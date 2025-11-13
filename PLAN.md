@@ -62,36 +62,36 @@
 - [x] 4.10 Créer l'espace d'administration protégé (/admin)
 
 ### 5. Barre de menu latérale dépliable (Sidebar)
-- [ ] 5.1 Utiliser le composant Sidebar de shadcn/ui comme base
-- [ ] 5.2 Créer le SidebarProvider pour gérer l'état global
-- [ ] 5.3 Implémenter SidebarTrigger pour le bouton toggle
-- [ ] 5.4 Concevoir les items de navigation avec SidebarMenuItem
-- [ ] 5.5 Utiliser les icônes de lucide-react pour chaque section
-- [ ] 5.6 Configurer l'affichage conditionnel du texte (déplié/replié)
-- [ ] 5.7 Personnaliser les effets de survol avec les variants shadcn
-- [ ] 5.8 Implémenter les états actifs avec SidebarMenuButton
-- [ ] 5.9 Assurer la persistance de l'état avec useSidebar hook
-- [ ] 5.10 Rendre la sidebar responsive avec les breakpoints shadcn
-- [ ] 5.11 Gérer l'ajustement automatique du contenu principal avec SidebarInset
+- [x] 5.1 Utiliser le composant Sidebar de shadcn/ui comme base
+- [x] 5.2 Créer le SidebarProvider pour gérer l'état global
+- [x] 5.3 Implémenter SidebarTrigger pour le bouton toggle
+- [x] 5.4 Concevoir les items de navigation avec SidebarMenuItem
+- [x] 5.5 Utiliser les icônes de lucide-react pour chaque section
+- [x] 5.6 Configurer l'affichage conditionnel du texte (déplié/replié)
+- [x] 5.7 Personnaliser les effets de survol avec les variants shadcn
+- [x] 5.8 Implémenter les états actifs avec SidebarMenuButton
+- [x] 5.9 Assurer la persistance de l'état avec useSidebar hook
+- [x] 5.10 Rendre la sidebar responsive avec les breakpoints shadcn
+- [x] 5.11 Gérer l'ajustement automatique du contenu principal avec SidebarInset
 
 ### 6. Système de thème clair/sombre
-- [ ] 6.1 Installer et configurer next-themes
-- [ ] 6.2 Créer le ThemeProvider dans le layout principal
-- [ ] 6.3 Utiliser le composant DropdownMenu de shadcn/ui pour le sélecteur de thème
-- [ ] 6.4 Créer 3 options de menu : Clair, Sombre, Système
-- [ ] 6.5 Intégrer le bouton de thème dans la sidebar avec des icônes (Sun, Moon, Monitor)
-- [ ] 6.6 Définir les variables CSS pour le mode clair dans globals.css
-- [ ] 6.7 Définir les variables CSS pour le mode sombre dans globals.css
-- [ ] 6.8 Configurer le mode système (détection automatique)
-- [ ] 6.9 Ajouter les transitions douces lors du changement de thème
-- [ ] 6.10 Assurer la persistance du choix de thème
-- [ ] 6.11 Éviter le flash de contenu non stylisé (FOUC) au chargement avec suppressHydrationWarning
+- [x] 6.1 Installer et configurer next-themes
+- [x] 6.2 Créer le ThemeProvider dans le layout principal
+- [x] 6.3 Utiliser le composant DropdownMenu de shadcn/ui pour le sélecteur de thème
+- [x] 6.4 Créer 3 options de menu : Clair, Sombre, Système
+- [x] 6.5 Intégrer le bouton de thème dans la sidebar avec des icônes (Sun, Moon, Monitor)
+- [x] 6.6 Définir les variables CSS pour le mode clair dans globals.css
+- [x] 6.7 Définir les variables CSS pour le mode sombre dans globals.css
+- [x] 6.8 Configurer le mode système (détection automatique)
+- [x] 6.9 Ajouter les transitions douces lors du changement de thème
+- [x] 6.10 Assurer la persistance du choix de thème
+- [x] 6.11 Éviter le flash de contenu non stylisé (FOUC) au chargement avec suppressHydrationWarning
 
 ### 7. Composants de navigation complémentaires
 - [ ] 7.1 Créer le Header avec le composant Sheet de shadcn/ui pour mobile
-- [ ] 7.2 Créer le Footer avec des Cards ou Separators shadcn/ui
+- [x] 7.2 Créer le Footer avec des Cards ou Separators shadcn/ui
 - [ ] 7.3 Utiliser le composant Sheet pour le menu mobile hamburger
-- [ ] 7.4 Implémenter le Breadcrumb avec le composant shadcn/ui
+- [x] 7.4 Implémenter le Breadcrumb avec le composant shadcn/ui
 - [ ] 7.5 Créer un overlay avec Sheet backdrop pour mobile
 
 ### 8. Design system et thème
@@ -133,14 +133,14 @@
 ## Phase 4 : Fonctionnalités - Histoire Familiale
 
 ### 12. Page Histoire familiale - Structure chronologique
-- [ ] 12.1 Créer le layout principal avec Sidebar et navigation par période
-- [ ] 12.2 Créer la section "Les Origines" (date la plus ancienne connue)
-- [ ] 12.3 Créer la section "XIXᵉ siècle" avec événements et contexte
-- [ ] 12.4 Créer la section "XXᵉ siècle" (guerres, résistance, Colonel Rémy)
-- [ ] 12.5 Créer la section "Après-guerre → années 2000"
-- [ ] 12.6 Créer la section "Génération actuelle"
+- [x] 12.1 Créer le layout principal avec Sidebar et navigation par période
+- [x] 12.2 Créer la section "Les Origines" (date la plus ancienne connue)
+- [x] 12.3 Créer la section "XIXᵉ siècle" avec événements et contexte
+- [x] 12.4 Créer la section "XXᵉ siècle" (guerres, résistance, Colonel Rémy)
+- [x] 12.5 Créer la section "Après-guerre → années 2000"
+- [x] 12.6 Créer la section "Génération actuelle"
 - [ ] 12.7 Implémenter une timeline animée horizontale avec scroll
-- [ ] 12.8 Créer des cartes d'événements avec Card et Badge shadcn/ui
+- [x] 12.8 Créer des cartes d'événements avec Card et Badge shadcn/ui
 - [ ] 12.9 Ajouter des filtres par période avec Select shadcn/ui
 - [ ] 12.10 Intégrer des photos d'époque avec AspectRatio et Dialog pour zoom
 
@@ -517,6 +517,62 @@
 
 ## Notes d'implémentation
 
+### État d'avancement - Phase 2
+
+**Tâches complétées :**
+- ✅ **Tâche 5** : Barre de menu latérale dépliable (Sidebar) - **100% complétée**
+  - Sidebar organisée en groupes de navigation (Navigation, Exploration, Ressources)
+  - Sous-menus expandables pour "Histoire familiale" et "Créations artistiques"
+  - Profil utilisateur dans le footer avec avatar, nom et email
+  - Header avec logo DECKER et dropdown
+  - Mode replié/déplié fonctionnel avec `collapsible="icon"`
+  
+- ✅ **Tâche 6** : Système de thème clair/sombre - **100% complétée**
+  - Thème intégré dans le menu utilisateur du footer
+  - Support des modes Clair, Sombre et Système
+  - Variables CSS configurées pour les deux modes
+  - Persistance du choix utilisateur
+
+- ✅ **Tâche 7.2** : Footer avec Cards et Separators - **100% complétée**
+  - Composant `SiteFooter` créé avec 3 colonnes (À propos, Navigation, Sources & Contact)
+  - Utilisation de Card, Separator et icônes lucide-react
+  - Design responsive et intégration dans le layout principal
+
+- ✅ **Tâche 7.4** : Breadcrumb avec shadcn/ui - **100% complétée**
+  - Composant `HistoireBreadcrumb` créé avec navigation dynamique
+  - Breadcrumb adaptatif selon la page (2 ou 3 niveaux)
+  - Intégration dans le layout `/histoire`
+
+**Fonctionnalités supplémentaires implémentées :**
+- Navigation organisée en groupes logiques avec labels
+- Sous-menus expandables avec animation (Collapsible)
+- Profil utilisateur complet avec dropdown (Paramètres, Thème, Déconnexion)
+- Style épuré correspondant au design moderne (fond blanc, texte sombre, bordures subtiles)
+
+### État d'avancement - Phase 4
+
+**Tâches complétées :**
+- ✅ **Tâche 12** : Page Histoire familiale - Structure chronologique - **80% complétée**
+  - ✅ Layout principal créé (`app/histoire/layout.tsx`) avec Breadcrumb dynamique et SectionHeader
+  - ✅ Composant `SectionHeader` réutilisable créé avec props title, description, icon
+  - ✅ Page index (`app/histoire/page.tsx`) avec grille responsive de Cards pour les 5 périodes
+  - ✅ Section "Les Origines" (`app/histoire/origines/page.tsx`) créée
+  - ✅ Section "XIXᵉ siècle" (`app/histoire/xixe/page.tsx`) créée
+  - ✅ Section "XXᵉ siècle" (`app/histoire/xxe/page.tsx`) créée avec mention Colonel Rémy
+  - ✅ Section "Après-guerre → 2000" (`app/histoire/apres-guerre/page.tsx`) créée
+  - ✅ Section "Génération actuelle" (`app/histoire/actuelle/page.tsx`) créée
+  - ✅ Cartes d'événements avec Card et Badge shadcn/ui implémentées
+  - ⏳ Timeline animée horizontale (à venir)
+  - ⏳ Filtres par période (à venir)
+  - ⏳ Intégration photos d'époque (à venir)
+
+**Architecture implémentée :**
+- Layout serveur avec composants client séparés (`HistoireBreadcrumb`, `HistoireHeader`)
+- Breadcrumb dynamique basé sur `usePathname()` pour navigation contextuelle
+- Grille responsive Cards (md:grid-cols-2 lg:grid-cols-3) pour la page index
+- Structure modulaire avec composants réutilisables (SectionHeader)
+- URLs alignées avec la sidebar (`/histoire/xixe`, `/histoire/xxe`, `/histoire/actuelle`)
+
 ### Spécifications détaillées de la Sidebar
 
 **Utilisation du composant Sidebar de shadcn/ui :**
@@ -546,27 +602,32 @@ npx shadcn@latest add sidebar
 - **Transition** : Animation fluide automatique avec data-state
 - **Position** : Fixe à gauche, géré par le composant
 
-**Éléments de la sidebar :**
-1. **SidebarHeader** : Logo/Titre familial DECKER
-2. **SidebarTrigger** : Bouton pour déplier/replier (icône Menu ou ChevronsLeft/Right)
-3. **SidebarContent avec SidebarMenu** :
-   - Accueil (Home icon de lucide-react)
-   - Histoire familiale (BookOpen ou Clock)
-   - Archives & Documents (Archive ou FolderOpen)
-   - Créations artistiques (Palette ou Sparkles)
-   - Portraits (Users ou UserCircle)
-   - Arbre généalogique (Network ou GitBranch)
-   - Témoignages (MessageSquare ou Heart)
-   - Téléchargements (Download ou FolderArchive)
-   - Méthode & Sources (BookMarked ou FileText)
-4. **SidebarFooter** : DropdownMenu pour thème avec icônes Sun/Moon/Monitor
+**Éléments de la sidebar (implémentés) :**
+1. **SidebarHeader** : Logo DECKER avec Building2 icon et dropdown
+2. **SidebarTrigger** : Bouton pour déplier/replier dans le header principal (icône PanelLeft)
+3. **SidebarContent avec SidebarMenu organisé en groupes** :
+   - **Groupe "Navigation"** :
+     - Accueil (Home icon)
+     - Histoire familiale (BookOpen) - avec sous-menu expandable
+     - Archives & Documents (Archive)
+     - Créations artistiques (Palette) - avec sous-menu expandable
+   - **Groupe "Exploration"** :
+     - Portraits (Users)
+     - Arbre généalogique (Network)
+     - Témoignages (MessageSquare)
+   - **Groupe "Ressources"** :
+     - Téléchargements (Download)
+     - Méthode & Sources (FileText)
+4. **SidebarFooter** : Profil utilisateur avec Avatar, nom "Famille DECKER", email "famille@decker.fr" et dropdown menu (Paramètres, Thème, Déconnexion)
 
-**Composants shadcn/ui nécessaires :**
+**Composants shadcn/ui nécessaires (installés) :**
 - `Button` : Pour les actions
-- `DropdownMenu` : Pour le sélecteur de thème
+- `DropdownMenu` : Pour le sélecteur de thème et le menu utilisateur
 - `Separator` : Pour diviser les sections
 - `Tooltip` : Pour les labels en mode replié
 - `ScrollArea` : Pour le contenu scrollable
+- `Collapsible` : Pour les sous-menus expandables
+- `Avatar` : Pour le profil utilisateur dans le footer
 
 **États interactifs (gérés automatiquement) :**
 - **Hover** : `data-[active=true]` et variants
@@ -608,30 +669,31 @@ const {
 } = useSidebar()
 ```
 
-**Persistance :**
-- État sauvegardé automatiquement via useSidebar
+**Persistance (implémentée) :**
+- État de la sidebar sauvegardé automatiquement via useSidebar (cookie)
 - Préférence de thème via next-themes (localStorage)
+- État des sous-menus expandables géré avec useState (local au composant)
 
 ### Liste complète des composants shadcn/ui à installer
 
-**Composants de base :**
+**Composants de base (installés) :**
 ```bash
 npx shadcn@latest add button
 npx shadcn@latest add card
 npx shadcn@latest add badge
-npx shadcn@latest add avatar
+npx shadcn@latest add avatar  # ✅ Installé
 npx shadcn@latest add separator
 npx shadcn@latest add skeleton
 npx shadcn@latest add scroll-area
 npx shadcn@latest add aspect-ratio
 ```
 
-**Navigation :**
+**Navigation (installés) :**
 ```bash
-npx shadcn@latest add sidebar
+npx shadcn@latest add sidebar  # ✅ Installé
 npx shadcn@latest add breadcrumb
 npx shadcn@latest add navigation-menu
-npx shadcn@latest add tabs
+npx shadcn@latest add tabs  # ✅ Installé
 ```
 
 **Formulaires :**
@@ -645,7 +707,7 @@ npx shadcn@latest add form
 npx shadcn@latest add label
 ```
 
-**Overlays et feedback :**
+**Overlays et feedback (installés) :**
 ```bash
 npx shadcn@latest add dialog
 npx shadcn@latest add sheet
@@ -655,6 +717,7 @@ npx shadcn@latest add hover-card
 npx shadcn@latest add alert
 npx shadcn@latest add toast
 npx shadcn@latest add progress
+npx shadcn@latest add collapsible  # ✅ Installé pour les sous-menus expandables
 ```
 
 **Médias et affichage :**
