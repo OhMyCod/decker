@@ -6,7 +6,7 @@ import { Calendar } from "lucide-react"
 
 export default function XIXPage() {
   return (
-    <div className="space-y-6">
+    <div id="timeline-section-xixe" data-timeline-section="xixe" className="space-y-6">
       <SectionHeader
         title="XIXᵉ siècle"
         description="L'histoire de la famille au XIXᵉ siècle, période de transformations et d'évolution"

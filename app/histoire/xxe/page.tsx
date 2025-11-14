@@ -6,7 +6,7 @@ import { History } from "lucide-react"
 
 export default function XXPage() {
   return (
-    <div className="space-y-6">
+    <div id="timeline-section-xxe" data-timeline-section="xxe" className="space-y-6">
       <SectionHeader
         title="XXᵉ siècle"
         description="La famille pendant les deux guerres mondiales, la Résistance et le Colonel Rémy"

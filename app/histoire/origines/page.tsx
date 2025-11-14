@@ -6,7 +6,7 @@ import { Clock } from "lucide-react"
 
 export default function OriginesPage() {
   return (
-    <div className="space-y-6">
+    <div id="timeline-section-origines" data-timeline-section="origines" className="space-y-6">
       <SectionHeader
         title="Les Origines"
         description="Les premières traces de la famille DECKER et ses racines historiques"

@@ -6,7 +6,7 @@ import { Sparkles } from "lucide-react"
 
 export default function AujourdhuiPage() {
   return (
-    <div className="space-y-6">
+    <div id="timeline-section-actuelle" data-timeline-section="actuelle" className="space-y-6">
       <SectionHeader
         title="Aujourd'hui"
         description="L'histoire contemporaine de la famille et la génération actuelle"
