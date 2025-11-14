@@ -39,13 +39,20 @@ La configuration complète de la base de données Supabase pour le projet DECKER
 - ✅ Gestion des erreurs intégrée
 - ✅ Types TypeScript stricts
 
-### 6. Documentation ✅
+### 6. Fonctions API RPC ✅
+- ✅ Extension pg_trgm activée
+- ✅ 10 fonctions RPC créées
+- ✅ Fonctions testées (get_family_statistics)
+- ✅ Recherche full-text opérationnelle
+- ✅ Arbre généalogique simplifié
+
+### 7. Documentation ✅
 - ✅ Guide de configuration Supabase
 - ✅ Documentation des services
 - ✅ README mis à jour
 - ✅ Guide de résolution de problèmes
 
-### 7. Tests et Validation ✅
+### 8. Tests et Validation ✅
 - ✅ Build Next.js réussi
 - ✅ Aucune erreur TypeScript
 - ✅ 24 tables vérifiées

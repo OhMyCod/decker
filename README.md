@@ -26,6 +26,7 @@ Site web familial moderne pour préserver et partager l'histoire, les archives e
   - Politiques RLS activées
   - Clients SSR pour Next.js 15
   - 7 services métier (members, events, creations, archives, testimonies, portraits, storage)
+  - 10 fonctions API RPC (arbre généalogique, recherche, statistiques)
 
 ### À venir
 - 🔲 Sidebar de navigation dépliable

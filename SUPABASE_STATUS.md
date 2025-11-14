@@ -111,7 +111,26 @@ Chaque service expose des fonctions réutilisables :
 4. `create_rls_policies` - Politiques de sécurité RLS
 5. `create_storage_buckets` - Buckets de stockage et politiques
 
-### 7. Documentation ✅
+### 7. Fonctions API RPC ✅
+**10 fonctions créées** avec succès :
+
+#### Fonctions spécifiques par membre (4)
+- `get_member_events(member_uuid)` - Événements d'un membre
+- `get_member_creations(member_uuid)` - Créations d'un membre
+- `get_member_archives(member_uuid)` - Archives liées à un membre
+- `get_member_testimonies(member_uuid)` - Témoignages d'un/sur un membre
+
+#### Fonctions de recherche (3)
+- `search_family_members(search_query, filters...)` - Recherche avancée avec score
+- `search_all_content(search_query)` - Recherche full-text globale
+- `get_prominent_members()` - Liste des membres marquants
+
+#### Fonctions de consultation (3)
+- `get_family_tree(member_uuid, depth_limit)` - Arbre généalogique (parents, enfants directs)
+- `get_events_by_period(period_name)` - Événements par période historique
+- `get_family_statistics()` - Statistiques globales de la famille
+
+### 8. Documentation ✅
 - `docs/SUPABASE_CONFIGURATION.md` - Guide complet de configuration
 - `README.md` - Mis à jour avec les nouveaux éléments
 - `SUPABASE_STATUS.md` - Ce document
