@@ -36,12 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 # IDE and editor files
-.cursor/
-.cursorindexingignore
-.qoder/
-.specstory/
 .mcp.json
-CLAUDE.md
 .vscode/
 .idea/
 .env

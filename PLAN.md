@@ -139,7 +139,7 @@
 - [x] 12.4 Créer la section "XXᵉ siècle" (guerres, résistance, Colonel Rémy)
 - [x] 12.5 Créer la section "Après-guerre → années 2000"
 - [x] 12.6 Créer la section "Génération actuelle"
-- [ ] 12.7 Implémenter une timeline animée horizontale avec scroll
+- [x] 12.7 Implémenter une timeline animée horizontale avec scroll
 - [x] 12.8 Créer des cartes d'événements avec Card et Badge shadcn/ui
 - [ ] 12.9 Ajouter des filtres par période avec Select shadcn/ui
 - [ ] 12.10 Intégrer des photos d'époque avec AspectRatio et Dialog pour zoom
