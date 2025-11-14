@@ -1,141 +1,145 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useMemo } from "react"
 import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import { Clock, Calendar, History, Building2, Sparkles, LucideIcon } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
-
-export interface Period {
-  title: string
-  url: string
-  iconName: "Clock" | "Calendar" | "History" | "Building2" | "Sparkles"
-  description: string
-  period: string
-}
-
-const iconMap: Record<Period["iconName"], LucideIcon> = {
-  Clock,
-  Calendar,
-  History,
-  Building2,
-  Sparkles,
-}
+import { TimelineEvent } from "@/types/timeline"
+import { useTimelineSync } from "@/hooks/use-timeline-sync"
 
 interface HistoireTimelineProps {
-  periods: Period[]
+  events: TimelineEvent[]
+  currentSectionId?: string
 }
 
-export function HistoireTimeline({ periods }: HistoireTimelineProps) {
-  const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set())
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+export function HistoireTimeline({ events, currentSectionId }: HistoireTimelineProps) {
+  const sectionIds = useMemo(() => events.map((e) => e.sectionId), [events])
+  const { activeSectionId, scrollProgress } = useTimelineSync(sectionIds)
 
-  useEffect(() => {
-    const observers: IntersectionObserver[] = []
+  // Utiliser activeSectionId si disponible, sinon currentSectionId
+  const activeId = activeSectionId || currentSectionId || events[0]?.sectionId
 
-    itemRefs.current.forEach((ref, index) => {
-      if (!ref) return
+  // Calculer la position de l'indicateur basée sur la progression
+  const indicatorPosition = useMemo(() => {
+    if (events.length === 0) return 0
+    const activeIndex = events.findIndex((e) => e.sectionId === activeId)
+    if (activeIndex === -1) return 0
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisibleItems((prev) => new Set(prev).add(index))
-            }
-          })
-        },
-        {
-          threshold: 0.2,
-          rootMargin: "0px 0px -50px 0px",
-        }
-      )
+    // Position basée sur l'index de la section active
+    // Utiliser une distribution égale sur la largeur totale
+    const basePosition = events.length > 1 ? (activeIndex / (events.length - 1)) * 100 : 50
 
-      observer.observe(ref)
-      observers.push(observer)
-    })
+    return Math.min(100, Math.max(0, basePosition))
+  }, [activeId, events])
 
-    return () => {
-      observers.forEach((observer) => observer.disconnect())
-    }
-  }, [])
+  if (events.length === 0) return null
 
   return (
-    <div className="w-full space-y-6">
-      <div className="relative">
-        <ScrollArea className="w-full">
-          <div className="relative flex min-w-max items-start gap-8 px-4 pb-6 md:gap-12 md:px-6 lg:gap-16">
-            {/* Timeline line - positioned absolutely within the scroll container */}
-            <div className="absolute left-4 top-16 right-4 h-0.5 bg-gradient-to-r from-border via-primary/30 to-border md:left-6 md:right-6" />
+    <TooltipProvider>
+      <div className="w-full">
+        {/* Timeline Container */}
+        <div className="relative py-6 md:py-8">
+          {/* Progress Line */}
+          <div className="absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-border" />
+          <div
+            className="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-primary transition-all duration-500 ease-out"
+            style={{ width: `${indicatorPosition}%` }}
+          />
 
-            {/* Timeline items */}
-            {periods.map((period, index) => {
-              const Icon = iconMap[period.iconName]
-              const isVisible = visibleItems.has(index)
-              const isEven = index % 2 === 0
+          {/* Timeline Points */}
+          <ScrollArea className="w-full" orientation="horizontal">
+            <div className="relative flex min-w-full items-center justify-between gap-2 px-2 md:gap-4 md:px-4 lg:px-8">
+              {events.map((event, index) => {
+                const isActive = event.sectionId === activeId
+                const Icon = event.icon
 
-              return (
-                <div
-                  key={period.url}
-                  ref={(el) => {
-                    itemRefs.current[index] = el
-                  }}
-                  className={cn(
-                    "relative flex min-w-[280px] flex-col items-center transition-all duration-300 ease-smooth md:min-w-[320px]",
-                    isVisible ? "opacity-100" : "opacity-0"
-                  )}
-                >
-                  {/* Timeline point */}
-                  <div className="relative z-10 mb-4">
-                    <div
-                      className={cn(
-                        "flex h-16 w-16 items-center justify-center rounded-full border-4 border-background bg-primary shadow-lg transition-all duration-300 hover:scale-110",
-                        isVisible && isEven && "animate-slide-in-left",
-                        isVisible && !isEven && "animate-slide-in-right"
-                      )}
-                      style={{
-                        animationDelay: isVisible ? `${index * 100}ms` : "0ms",
-                      }}
-                    >
-                      <Icon className="h-6 w-6 text-primary-foreground" />
-                    </div>
-                  </div>
-
-                  {/* Card */}
-                  <Link href={period.url} className="w-full" aria-label={`Naviguer vers ${period.title}`}>
-                    <Card
-                      className={cn(
-                        "h-full w-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02]",
-                        isVisible && "animate-fade-in"
-                      )}
-                      style={{
-                        animationDelay: isVisible ? `${index * 100 + 50}ms` : "0ms",
-                      }}
-                    >
-                      <CardHeader className="pb-4">
-                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                          <CardTitle className="text-lg">{period.title}</CardTitle>
-                          <Badge variant="secondary" className="w-fit shrink-0">
-                            {period.period}
-                          </Badge>
+                return (
+                  <div
+                    key={event.id}
+                    className="relative flex min-w-[80px] flex-col items-center gap-1.5 md:min-w-0 md:gap-2 lg:gap-3"
+                    style={{ flex: `0 0 ${100 / events.length}%` }}
+                  >
+                    {/* Timeline Point */}
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Link
+                          href={event.url}
+                          className={cn(
+                            "relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all duration-300 md:h-12 md:w-12",
+                            "hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+                            isActive
+                              ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/50"
+                              : "border-muted-foreground/30 bg-background text-muted-foreground hover:border-primary/50"
+                          )}
+                          aria-label={`Aller à ${event.label}`}
+                        >
+                          {Icon ? (
+                            <Icon className="h-4 w-4 md:h-5 md:w-5" />
+                          ) : (
+                            <div
+                              className={cn(
+                                "h-2.5 w-2.5 rounded-full transition-all md:h-3 md:w-3",
+                                isActive ? "bg-primary-foreground" : "bg-muted-foreground"
+                              )}
+                            />
+                          )}
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent side="top" className="max-w-xs">
+                        <div className="space-y-1">
+                          <p className="font-semibold">{event.label}</p>
+                          <p className="text-xs text-muted-foreground">{event.date}</p>
+                          {event.description && (
+                            <p className="text-xs">{event.description}</p>
+                          )}
                         </div>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="line-clamp-2 text-sm">
-                          {period.description}
-                        </CardDescription>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </div>
-              )
-            })}
+                      </TooltipContent>
+                    </Tooltip>
+
+                    {/* Date Badge */}
+                    <Badge
+                      variant={isActive ? "default" : "secondary"}
+                      className={cn(
+                        "text-[10px] transition-all duration-300 md:text-xs",
+                        isActive && "scale-105 shadow-md"
+                      )}
+                    >
+                      {event.date}
+                    </Badge>
+
+                    {/* Label */}
+                    <p
+                      className={cn(
+                        "hidden text-center text-[10px] font-medium transition-colors duration-300 sm:block md:text-xs lg:text-sm",
+                        isActive ? "text-foreground" : "text-muted-foreground"
+                      )}
+                    >
+                      {event.label}
+                    </p>
+
+                    {/* Active Indicator Pulse */}
+                    {isActive && (
+                      <div className="absolute left-1/2 top-1/2 z-0 h-12 w-12 -translate-x-1/2 -translate-y-1/2 animate-timeline-pulse rounded-full bg-primary/20 md:h-16 md:w-16" />
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
+
+          {/* Active Position Indicator */}
+          <div
+            className="absolute top-1/2 z-20 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary bg-background shadow-lg transition-all duration-500 ease-out"
+            style={{ left: `${indicatorPosition}%` }}
+          >
+            <div className="absolute inset-0 animate-timeline-pulse rounded-full bg-primary/30" />
           </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+        </div>
       </div>
-    </div>
+    </TooltipProvider>
   )
 }
 

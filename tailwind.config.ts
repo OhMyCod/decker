@@ -290,6 +290,24 @@ export default {
           '100%': {
             backgroundPosition: '200% 0'
           }
+        },
+        'timeline-progress': {
+          '0%': {
+            width: '0%'
+          },
+          '100%': {
+            width: '100%'
+          }
+        },
+        'timeline-pulse': {
+          '0%, 100%': {
+            opacity: '1',
+            transform: 'scale(1)'
+          },
+          '50%': {
+            opacity: '0.8',
+            transform: 'scale(1.1)'
+          }
         }
       },
 
@@ -304,6 +322,8 @@ export default {
         'slide-in-right': 'slide-in-from-right 0.3s ease-out',
         'scale-in': 'scale-in 0.2s ease-out',
         'shimmer': 'shimmer 2s infinite linear',
+        'timeline-progress': 'timeline-progress 0.6s ease-out',
+        'timeline-pulse': 'timeline-pulse 2s ease-in-out infinite',
       },
 
       // Transitions personnalisées

@@ -1,27 +1,51 @@
-"use client"
-
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { HistoireTimeline } from "@/components/histoire-timeline"
-import { periods } from "@/lib/histoire-data"
-import { Clock, Calendar, History, Building2, Sparkles, LucideIcon } from "lucide-react"
+import { Clock, Calendar, History, Building2, Sparkles } from "lucide-react"
 
-const iconMap: Record<string, LucideIcon> = {
-  Clock,
-  Calendar,
-  History,
-  Building2,
-  Sparkles,
-}
+const periods = [
+  {
+    title: "Les Origines",
+    url: "/histoire/origines",
+    icon: Clock,
+    description: "Les premières traces de la famille DECKER et ses racines historiques.",
+    period: "Date la plus ancienne connue",
+  },
+  {
+    title: "XIXᵉ siècle",
+    url: "/histoire/xixe",
+    icon: Calendar,
+    description: "L'histoire de la famille au XIXᵉ siècle, période de transformations et d'évolution.",
+    period: "1800 - 1900",
+  },
+  {
+    title: "XXᵉ siècle",
+    url: "/histoire/xxe",
+    icon: History,
+    description: "La famille pendant les deux guerres mondiales, la Résistance et le Colonel Rémy.",
+    period: "1900 - 1945",
+  },
+  {
+    title: "Après-guerre → 2000",
+    url: "/histoire/apres-guerre",
+    icon: Building2,
+    description: "La reconstruction et l'évolution de la famille dans l'après-guerre jusqu'à l'an 2000.",
+    period: "1945 - 2000",
+  },
+  {
+    title: "Génération actuelle",
+    url: "/histoire/actuelle",
+    icon: Sparkles,
+    description: "L'histoire contemporaine de la famille et la génération actuelle.",
+    period: "2000 - Aujourd'hui",
+  },
+]
 
 export default function HistoirePage() {
   return (
-    <div className="space-y-6">
-      <HistoireTimeline periods={periods} />
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {periods.map((period) => {
-        const Icon = iconMap[period.iconName]
+        const Icon = period.icon
         return (
           <Link key={period.url} href={period.url}>
             <Card className="h-full transition-all hover:shadow-lg hover:scale-[1.02]">
@@ -41,7 +65,6 @@ export default function HistoirePage() {
           </Link>
         )
       })}
-      </div>
     </div>
   )
 }

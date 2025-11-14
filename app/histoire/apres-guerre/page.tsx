@@ -6,7 +6,7 @@ import { Building2 } from "lucide-react"
 
 export default function ApresGuerrePage() {
   return (
-    <div className="space-y-6">
+    <div id="timeline-section-apres-guerre" data-timeline-section="apres-guerre" className="space-y-6">
       <SectionHeader
         title="Après-guerre → 2000"
         description="La reconstruction et l'évolution de la famille dans l'après-guerre jusqu'à l'an 2000"
