@@ -20,7 +20,13 @@ Site web familial moderne pour préserver et partager l'histoire, les archives e
 - ✅ 32 composants shadcn/ui installés
 - ✅ Structure de projet organisée
 - ✅ Configuration de déploiement Vercel
-- ✅ Client Supabase configuré
+- ✅ **Base de données Supabase complète**
+  - 24 tables PostgreSQL créées
+  - 4 buckets de stockage configurés
+  - Politiques RLS activées
+  - Clients SSR pour Next.js 15
+  - 7 services métier (members, events, creations, archives, testimonies, portraits, storage)
+  - 10 fonctions API RPC (arbre généalogique, recherche, statistiques)
 
 ### À venir
 - 🔲 Sidebar de navigation dépliable
@@ -33,6 +39,7 @@ Site web familial moderne pour préserver et partager l'histoire, les archives e
 - 🔲 Portraits des membres
 - 🔲 Section témoignages
 - 🔲 Espace d'administration
+- 🔲 Insertion de données de test
 
 ## 🛠️ Installation et développement
 
@@ -101,7 +108,18 @@ decker/
 │   └── use-mobile.tsx  # Hook pour détecter mobile
 ├── lib/                 # Utilitaires
 │   ├── utils.ts        # Fonctions utilitaires
-│   └── supabase.ts     # Client Supabase
+│   ├── supabase/       # Clients Supabase
+│   │   ├── client.ts   # Client navigateur
+│   │   ├── server.ts   # Client serveur
+│   │   └── middleware.ts # Middleware auth
+│   └── services/       # Services métier
+│       ├── members.ts    # Gestion membres
+│       ├── events.ts     # Gestion événements
+│       ├── creations.ts  # Gestion créations
+│       ├── archives.ts   # Gestion archives
+│       ├── testimonies.ts # Gestion témoignages
+│       ├── portraits.ts  # Gestion portraits
+│       └── storage.ts    # Gestion stockage
 ├── contexts/            # Contexts React
 ├── types/               # Types TypeScript
 ├── public/              # Assets statiques
@@ -141,6 +159,8 @@ Popover, Tooltip, HoverCard, DropdownMenu
 
 - [PLAN.md](./PLAN.md) - Plan d'implémentation complet du projet
 - [DEPLOIEMENT.md](./DEPLOIEMENT.md) - Guide de déploiement détaillé
+- [DATA_MODEL.md](./DATA_MODEL.md) - Modèle de données complet
+- [docs/SUPABASE_CONFIGURATION.md](./docs/SUPABASE_CONFIGURATION.md) - Configuration Supabase détaillée
 
 ## 🚀 Déploiement
 

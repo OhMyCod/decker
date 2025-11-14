@@ -88,45 +88,45 @@
 - [x] 6.11 Éviter le flash de contenu non stylisé (FOUC) au chargement avec suppressHydrationWarning
 
 ### 7. Composants de navigation complémentaires
-- [ ] 7.1 Créer le Header avec le composant Sheet de shadcn/ui pour mobile
+- [x] 7.1 Créer le Header avec le composant Sheet de shadcn/ui pour mobile
 - [x] 7.2 Créer le Footer avec des Cards ou Separators shadcn/ui
-- [ ] 7.3 Utiliser le composant Sheet pour le menu mobile hamburger
+- [x] 7.3 Utiliser le composant Sheet pour le menu mobile hamburger
 - [x] 7.4 Implémenter le Breadcrumb avec le composant shadcn/ui
-- [ ] 7.5 Créer un overlay avec Sheet backdrop pour mobile
+- [x] 7.5 Créer un overlay avec Sheet backdrop pour mobile
 
 ### 8. Design system et thème
-- [ ] 8.1 Définir la palette de couleurs familiale (mode clair) dans tailwind.config
-- [ ] 8.2 Définir la palette de couleurs pour le mode sombre dans tailwind.config
-- [ ] 8.3 Configurer la typographie (polices) avec Tailwind
-- [ ] 8.4 Personnaliser les composants shadcn/ui selon l'identité familiale
-- [ ] 8.5 Définir les espacements et la grille responsive avec Tailwind
-- [ ] 8.6 Utiliser les variants shadcn/ui pour les états interactifs (hover, active, focus)
-- [ ] 8.7 Définir les animations et transitions avec Tailwind/shadcn
-- [ ] 8.8 Configurer les breakpoints responsive dans tailwind.config
-- [ ] 8.9 Créer un guide de style visuel documentant l'utilisation de shadcn/ui
+- [x] 8.1 Définir la palette de couleurs familiale (mode clair) dans tailwind.config
+- [x] 8.2 Définir la palette de couleurs pour le mode sombre dans tailwind.config
+- [x] 8.3 Configurer la typographie (polices) avec Tailwind
+- [x] 8.4 Personnaliser les composants shadcn/ui selon l'identité familiale
+- [x] 8.5 Définir les espacements et la grille responsive avec Tailwind
+- [x] 8.6 Utiliser les variants shadcn/ui pour les états interactifs (hover, active, focus)
+- [x] 8.7 Définir les animations et transitions avec Tailwind/shadcn
+- [x] 8.8 Configurer les breakpoints responsive dans tailwind.config
+- [x] 8.9 Créer un guide de style visuel documentant l'utilisation de shadcn/ui
 
 ## Phase 3 : Gestion des Données
 
 ### 9. Modélisation des données
-- [ ] 9.1 Définir le schéma pour les membres de la famille (avec liens généalogiques)
-- [ ] 9.2 Définir le schéma pour les événements historiques (chronologie détaillée)
-- [ ] 9.3 Définir le schéma pour les créations artistiques (musique, photos, peintures, vidéos, textes)
-- [ ] 9.4 Définir le schéma pour les archives et documents (photos anciennes, vidéos INA, documents écrits)
-- [ ] 9.5 Définir le schéma pour les témoignages et récits personnels
-- [ ] 9.6 Définir le schéma pour les portraits des membres marquants
-- [ ] 9.7 Définir le schéma pour les sources et méthodologie
-- [ ] 9.8 Créer les types TypeScript correspondants pour toutes les entités
+- [x] 9.1 Définir le schéma pour les membres de la famille (avec liens généalogiques)
+- [x] 9.2 Définir le schéma pour les événements historiques (chronologie détaillée)
+- [x] 9.3 Définir le schéma pour les créations artistiques (musique, photos, peintures, vidéos, textes)
+- [x] 9.4 Définir le schéma pour les archives et documents (photos anciennes, vidéos INA, documents écrits)
+- [x] 9.5 Définir le schéma pour les témoignages et récits personnels
+- [x] 9.6 Définir le schéma pour les portraits des membres marquants
+- [x] 9.7 Définir le schéma pour les sources et méthodologie
+- [x] 9.8 Créer les types TypeScript correspondants pour toutes les entités
 
 ### 10. Configuration de la base de données (si Supabase)
-- [ ] 10.1 Créer un projet Supabase
-- [ ] 10.2 Créer les tables nécessaires
-- [ ] 10.3 Configurer les politiques de sécurité (RLS)
-- [ ] 10.4 Créer les fonctions d'API pour récupérer les données
+- [x] 10.1 Créer un projet Supabase
+- [x] 10.2 Créer les tables nécessaires
+- [x] 10.3 Configurer les politiques de sécurité (RLS)
+- [x] 10.4 Créer les fonctions d'API pour récupérer les données
 
 ### 11. Configuration du stockage médias
-- [ ] 11.1 Configurer les dossiers/buckets pour les photos
-- [ ] 11.2 Configurer les dossiers/buckets pour les vidéos
-- [ ] 11.3 Configurer les dossiers/buckets pour l'audio
+- [x] 11.1 Configurer les dossiers/buckets pour les photos
+- [x] 11.2 Configurer les dossiers/buckets pour les vidéos
+- [x] 11.3 Configurer les dossiers/buckets pour l'audio
 - [ ] 11.4 Mettre en place l'optimisation automatique des images
 - [ ] 11.5 Tester l'upload et le chargement des médias
 
@@ -520,6 +520,19 @@
 ### État d'avancement - Phase 2
 
 **Tâches complétées :**
+- ✅ **Tâche 8** : Design system et thème - **100% complétée**
+  - Palette de couleurs familiale DECKER complète (Gamboge, Tangerine, Cinnabar, Oxford Blue, Cambridge Blue)
+  - Nuances 50-900 pour chaque couleur avec support du mode sombre
+  - Couleurs sémantiques (heritage, warmth, creativity, legacy, nature)
+  - Configuration typographique (Geist Sans, Geist Mono, Georgia)
+  - Échelle fontSize avec lineHeight optimisée
+  - Espacements personnalisés (18, 88, 100, 112, 128)
+  - Breakpoints responsive avec ajout du breakpoint 3xl (1920px)
+  - Animations : fade-in/out, slide-in (4 directions), scale-in, shimmer
+  - Timing functions personnalisées : bounce-in, smooth
+  - Guide de style visuel complet (STYLE_GUIDE.md) avec exemples et patterns
+
+
 - ✅ **Tâche 5** : Barre de menu latérale dépliable (Sidebar) - **100% complétée**
   - Sidebar organisée en groupes de navigation (Navigation, Exploration, Ressources)
   - Sous-menus expandables pour "Histoire familiale" et "Créations artistiques"
