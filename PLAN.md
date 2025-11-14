@@ -118,7 +118,7 @@
 - [x] 9.8 Créer les types TypeScript correspondants pour toutes les entités
 
 ### 10. Configuration de la base de données (si Supabase)
-- [ ] 10.1 Créer un projet Supabase
+- [x] 10.1 Créer un projet Supabase
 - [x] 10.2 Créer les tables nécessaires
 - [x] 10.3 Configurer les politiques de sécurité (RLS)
 - [x] 10.4 Créer les fonctions d'API pour récupérer les données
