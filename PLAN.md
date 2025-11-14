@@ -108,14 +108,14 @@
 ## Phase 3 : Gestion des Données
 
 ### 9. Modélisation des données
-- [ ] 9.1 Définir le schéma pour les membres de la famille (avec liens généalogiques)
-- [ ] 9.2 Définir le schéma pour les événements historiques (chronologie détaillée)
-- [ ] 9.3 Définir le schéma pour les créations artistiques (musique, photos, peintures, vidéos, textes)
-- [ ] 9.4 Définir le schéma pour les archives et documents (photos anciennes, vidéos INA, documents écrits)
-- [ ] 9.5 Définir le schéma pour les témoignages et récits personnels
-- [ ] 9.6 Définir le schéma pour les portraits des membres marquants
-- [ ] 9.7 Définir le schéma pour les sources et méthodologie
-- [ ] 9.8 Créer les types TypeScript correspondants pour toutes les entités
+- [x] 9.1 Définir le schéma pour les membres de la famille (avec liens généalogiques)
+- [x] 9.2 Définir le schéma pour les événements historiques (chronologie détaillée)
+- [x] 9.3 Définir le schéma pour les créations artistiques (musique, photos, peintures, vidéos, textes)
+- [x] 9.4 Définir le schéma pour les archives et documents (photos anciennes, vidéos INA, documents écrits)
+- [x] 9.5 Définir le schéma pour les témoignages et récits personnels
+- [x] 9.6 Définir le schéma pour les portraits des membres marquants
+- [x] 9.7 Définir le schéma pour les sources et méthodologie
+- [x] 9.8 Créer les types TypeScript correspondants pour toutes les entités
 
 ### 10. Configuration de la base de données (si Supabase)
 - [ ] 10.1 Créer un projet Supabase
