@@ -119,14 +119,14 @@
 
 ### 10. Configuration de la base de données (si Supabase)
 - [ ] 10.1 Créer un projet Supabase
-- [ ] 10.2 Créer les tables nécessaires
-- [ ] 10.3 Configurer les politiques de sécurité (RLS)
-- [ ] 10.4 Créer les fonctions d'API pour récupérer les données
+- [x] 10.2 Créer les tables nécessaires
+- [x] 10.3 Configurer les politiques de sécurité (RLS)
+- [x] 10.4 Créer les fonctions d'API pour récupérer les données
 
 ### 11. Configuration du stockage médias
-- [ ] 11.1 Configurer les dossiers/buckets pour les photos
-- [ ] 11.2 Configurer les dossiers/buckets pour les vidéos
-- [ ] 11.3 Configurer les dossiers/buckets pour l'audio
+- [x] 11.1 Configurer les dossiers/buckets pour les photos
+- [x] 11.2 Configurer les dossiers/buckets pour les vidéos
+- [x] 11.3 Configurer les dossiers/buckets pour l'audio
 - [ ] 11.4 Mettre en place l'optimisation automatique des images
 - [ ] 11.5 Tester l'upload et le chargement des médias
 
