@@ -49,7 +49,7 @@ export function HistoireTimeline({ events, currentSectionId }: HistoireTimelineP
           />
 
           {/* Timeline Points */}
-          <ScrollArea className="w-full" orientation="horizontal">
+          <ScrollArea className="w-full">
             <div className="relative flex min-w-full items-center justify-between gap-2 px-2 md:gap-4 md:px-4 lg:px-8">
               {events.map((event, index) => {
                 const isActive = event.sectionId === activeId

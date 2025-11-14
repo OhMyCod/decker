@@ -24,7 +24,8 @@ export function useTimelineSync(sectionIds: string[]): TimelineSyncData {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         // Trouver la section la plus visible
-        let mostVisible: { entry: IntersectionObserverEntry; ratio: number } | null = null
+        type MostVisibleType = { entry: IntersectionObserverEntry; ratio: number }
+        let mostVisible: MostVisibleType | null = null
 
         entries.forEach((entry) => {
           const sectionId = entry.target.getAttribute("data-timeline-section")
@@ -35,13 +36,15 @@ export function useTimelineSync(sectionIds: string[]): TimelineSyncData {
           // Calculer le ratio de visibilité (0-1)
           const ratio = entry.intersectionRatio
 
-          if (!mostVisible || ratio > mostVisible.ratio) {
+          if (mostVisible === null || ratio > mostVisible.ratio) {
             mostVisible = { entry, ratio }
           }
         })
 
         if (mostVisible) {
-          const sectionId = mostVisible.entry.target.getAttribute("data-timeline-section")
+          // TypeScript type narrowing issue workaround
+          const mostVisibleEntry = (mostVisible as MostVisibleType).entry
+          const sectionId = mostVisibleEntry.target.getAttribute("data-timeline-section")
           if (sectionId) {
             setActiveSectionId(sectionId)
           }
