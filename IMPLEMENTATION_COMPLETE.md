@@ -69,11 +69,12 @@ lib/
     └── storage.ts     ✅ Service stockage
 
 supabase/migrations/
-├── create_base_tables.sql              ✅ Appliquée
-├── create_artistic_creations.sql       ✅ Appliquée
-├── create_archives_testimonies.sql     ✅ Appliquée
-├── create_rls_policies.sql             ✅ Appliquée
-└── create_storage_buckets.sql          ✅ Appliquée
+├── 20251114062820_create_base_tables.sql              ✅ Appliquée
+├── 20251114062859_create_artistic_creations.sql       ✅ Appliquée
+├── 20251114062946_create_archives_testimonies.sql     ✅ Appliquée
+├── 20251114063025_create_rls_policies.sql             ✅ Appliquée
+├── 20251114063050_create_storage_buckets.sql          ✅ Appliquée
+└── 20251114063120_create_api_functions.sql            ✅ À appliquer
 
 docs/
 ├── SUPABASE_CONFIGURATION.md  ✅ Guide complet
@@ -89,16 +90,19 @@ IMPLEMENTATION_COMPLETE.md  ✅ Ce document
 - **Nombre de tables** : 24
 - **Nombre de politiques RLS** : ~50
 - **Nombre de buckets** : 4
+- **Nombre de migrations** : 6
+- **Nombre de fonctions RPC** : 12+
 - **Nombre de services** : 7
-- **Lignes de code SQL** : ~1000+
+- **Lignes de code SQL** : ~1500+
 - **Lignes de code TypeScript** : ~400+
 
 ## Prochaines Actions Recommandées
 
 ### Immédiat (Priorité HAUTE)
-1. **Insérer des données de test** dans les tables
-2. **Tester les services** dans les composants React
-3. **Vérifier l'upload** de fichiers dans les buckets
+1. **Appliquer la migration API functions** (20251114063120) dans le Dashboard Supabase
+2. **Insérer des données de test** dans les tables
+3. **Tester les services** dans les composants React
+4. **Vérifier l'upload** de fichiers dans les buckets
 
 ### Court terme (1-2 semaines)
 1. Développer les pages frontend principales
@@ -106,9 +110,10 @@ IMPLEMENTATION_COMPLETE.md  ✅ Ce document
 3. Créer l'interface d'administration CRUD
 
 ### Moyen terme (1 mois)
-1. Ajouter des fonctions RPC avancées
-2. Implémenter la recherche full-text
-3. Optimiser les performances avec des index supplémentaires
+1. Tester et optimiser les fonctions RPC existantes
+2. Créer des index supplémentaires pour la recherche full-text
+3. Implémenter le cache côté client pour les requêtes fréquentes
+4. Ajouter des fonctions RPC supplémentaires si nécessaire
 
 ## Exemples d'Utilisation
 
@@ -158,13 +163,15 @@ console.log('Événements XXe siècle:', xxeEvents)
 
 ## Checklist de Validation
 
-- [x] Toutes les migrations exécutées
+- [x] 5 migrations de base exécutées
+- [ ] Migration API functions à appliquer
 - [x] 24 tables créées
 - [x] 4 buckets configurés
 - [x] RLS activé sur toutes les tables
-- [x] Politiques RLS créées
-- [x] Clients Supabase configurés
-- [x] Services métier créés
+- [x] ~50 politiques RLS créées
+- [x] Clients Supabase SSR configurés
+- [x] 7 services métier créés
+- [x] 12+ fonctions RPC créées
 - [x] Documentation rédigée
 - [x] Tests de build réussis
 - [x] README mis à jour

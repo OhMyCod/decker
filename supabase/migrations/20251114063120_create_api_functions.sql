@@ -1,5 +1,5 @@
 -- Migration: Création des fonctions API Supabase
--- Date: 2025-01-13
+-- Date: 2025-11-14
 -- Description: Fonctions RPC pour requêtes courantes et recherche avancée
 
 -- ============================================================================
